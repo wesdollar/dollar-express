@@ -1,0 +1,47 @@
+image: node:16.16.0
+
+definitions:
+  scripts:
+    - script: &ArtAuth echo "Setting Art Auth Token" &&
+        export ARTIFACTORY_ADMIN_AUTH_TOKEN=$ARTIFACTORY_ADMIN_AUTH_TOKEN
+
+    - script: &Setup yarn install &&
+        echo "Yarn packages installed!"
+
+    - script: &ValidateCode yarn test-build &&
+        yarn eslint . --fix
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: "Validate Code"
+            script:
+              - *ArtAuth
+              - *Setup
+              - *ValidateCode
+  release/*:
+    - parallel:
+        - step:
+            name: "Validate Code"
+            script:
+              - *ArtAuth
+              - *Setup
+              - *ValidateCode
+  feature/*:
+    - parallel:
+        - step:
+            name: "Validate Code"
+            script:
+              - *ArtAuth
+              - *Setup
+              - *ValidateCode
+  branches:
+    main:
+      - parallel:
+          - step:
+              name: "Validate Code"
+              script:
+                - *ArtAuth
+                - *Setup
+                - *ValidateCode

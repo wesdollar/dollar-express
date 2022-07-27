@@ -1,0 +1,2955 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://wfca-esign-dmo.progressivelp.com/checkoutui/contract -->
+<html lang="en" class="hydrated">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style data-styles="">
+      grit-lessee-signature,
+      grit-lessor-signature,
+      ca-en,
+      ca-es,
+      md-en,
+      md-es,
+      nc-en,
+      nc-es,
+      ny-en,
+      ny-es,
+      ak-en,
+      ak-es,
+      al-en,
+      al-es,
+      ar-en,
+      ar-es,
+      az-en,
+      az-es,
+      co-en,
+      co-es,
+      ct-en,
+      ct-es,
+      dc-en,
+      dc-es,
+      de-en,
+      de-es,
+      fl-en,
+      fl-es,
+      ga-en,
+      ga-es,
+      hi-en,
+      hi-es,
+      ia-en,
+      ia-es,
+      id-en,
+      id-es,
+      il-en,
+      il-es,
+      in-en,
+      in-es,
+      ks-en,
+      ks-es,
+      ky-en,
+      ky-es,
+      la-en,
+      la-es,
+      ma-en,
+      ma-es,
+      me-en,
+      me-es,
+      mi-en,
+      mi-es,
+      mo-en,
+      mo-es,
+      ms-en,
+      ms-es,
+      mt-en,
+      mt-es,
+      nd-en,
+      nd-es,
+      ne-en,
+      ne-es,
+      nh-en,
+      nh-es,
+      nm-en,
+      nm-es,
+      nv-en,
+      nv-es,
+      oh-en,
+      oh-es,
+      ok-en,
+      ok-es,
+      or-en,
+      or-es,
+      pa-en,
+      pa-es,
+      ri-en,
+      ri-es,
+      sc-en,
+      sc-es,
+      sd-en,
+      sd-es,
+      tn-en,
+      tn-es,
+      tx-en,
+      tx-es,
+      ut-en,
+      ut-es,
+      va-en,
+      va-es,
+      wa-en,
+      wa-es,
+      wv-en,
+      wv-es,
+      wy-en,
+      wy-es,
+      hangtag-demo,
+      grit-lease-contract,
+      grit-hang-tag-ca-es,
+      grit-lease-cost-summary,
+      grit-payment-schedule,
+      grit-hang-tag {
+        visibility: hidden;
+      }
+      .hydrated {
+        visibility: inherit;
+      }
+    </style>
+    <style data-styles="">
+      router-index,
+      stencil-route,
+      stencil-route-link,
+      stencil-router,
+      grit-wc-button,
+      grit-wc-spinner,
+      forms-demo,
+      calendar-demo,
+      validators-demo,
+      notifications-demo,
+      inputs-demo,
+      autocomplete-demo,
+      selects-demo,
+      linear-loader-demo,
+      list-select-demo,
+      grit-wc-icon,
+      overlay-container-demo,
+      buttons-demo,
+      field-demo,
+      top-nav-bar-demo,
+      badges-demo,
+      grit-wc-chip,
+      chips-demo,
+      radios-demo,
+      grit-wc-overlay-container,
+      grit-wc-linear-loader,
+      grit-wc-top-nav-bar,
+      grit-wc-card,
+      cards-demo,
+      grit-wc-checkbox,
+      checkbox-demo,
+      grit-wc-icon-group,
+      icons-demo,
+      skeleton-demo,
+      slider-demo,
+      spinner-demo,
+      switches-demo,
+      context-consumer,
+      grit-wc-animated-card,
+      stencil-async-content,
+      stencil-route-switch,
+      stencil-route-title,
+      stencil-router-prompt,
+      stencil-router-redirect,
+      grit-wc-badge,
+      grit-wc-skeleton-item,
+      grit-wc-slider,
+      grit-wc-select,
+      grit-wc-notification,
+      grit-wc-notification-action,
+      grit-wc-message-group,
+      grit-wc-switch,
+      grit-wc-autocomplete,
+      grit-wc-autocomplete-item,
+      grit-wc-list-select,
+      grit-wc-list-select-item,
+      grit-wc-picker,
+      grit-wc-field,
+      grit-wc-field-message,
+      grit-wc-field-icon,
+      debit-credit-field,
+      mobile-email-field,
+      otp-code-field,
+      grit-wc-validation-message-item,
+      grit-wc-validation-message-list,
+      grit-wc-radio,
+      grit-wc-radio-group,
+      grit-wc-input,
+      grit-wc-calendar,
+      grit-wc-calendar-input,
+      grit-wc-calendar-actions,
+      grit-wc-calendar-board {
+        visibility: hidden;
+      }
+      .hydrated {
+        visibility: inherit;
+      }
+    </style>
+    <title>Lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .grit-linear-loader {
+        display: -ms-flexbox;
+        display: flex;
+        direction: row;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .grit-progress-bar
+        .grit-loader-container
+        .grit-progress-bar[mode="determinate"]
+        .slow-bar-animation {
+        -webkit-animation: progressLinearMovementLeftToRight 3s
+          cubic-bezier(0.4, 0, 0.2, 1) 1;
+        animation: progressLinearMovementLeftToRight 3s
+          cubic-bezier(0.4, 0, 0.2, 1) 1;
+        -webkit-animation-delay: 250ms;
+        animation-delay: 250ms;
+      }
+      .grit-progress-bar
+        .grit-loader-container
+        .grit-progress-bar[mode="determinate"]
+        .faster-bar-animation {
+        left: 100%;
+        -webkit-animation: progressLinearMovementLeftToRight 3s
+          cubic-bezier(0.4, 0, 0.2, 1) 1;
+        animation: progressLinearMovementLeftToRight 3s
+          cubic-bezier(0.4, 0, 0.2, 1) 1;
+        -webkit-animation-delay: 1.4s;
+        animation-delay: 1.4s;
+      }
+      .grit-progress-bar .grit-message-container {
+        font-family: var(--primary-font);
+        font-size: 1rem;
+        font-weight: var(--grit-font-weight-semibold);
+        line-height: var(--grit-common-line-height);
+        letter-spacing: var(--grit-common-letter-spacing);
+        color: var(--neutral900);
+        width: 100%;
+        display: grid;
+      }
+      .grit-progress-bar .grit-stop-animation {
+        -webkit-animation: none !important;
+        animation: none !important;
+      }
+      .grit-progress-bar .determinate-loader-progress-indicator {
+        margin: 16px 0;
+        font-family: var(--grit-font-family-header);
+        font-size: 0.85rem;
+        font-weight: var(--grit-font-weight-semibold);
+        line-height: var(--grit-common-line-height);
+        letter-spacing: var(--grit-common-letter-spacing);
+        color: var(--neutral900);
+      }
+      @-webkit-keyframes progressLinearMovement {
+        0% {
+          opacity: 1;
+          left: -100%;
+        }
+        40% {
+          opacity: 1;
+          left: 40%;
+        }
+        50% {
+          opacity: 1;
+          left: 100%;
+        }
+        100% {
+          opacity: 0;
+          left: 100%;
+        }
+      }
+      @keyframes progressLinearMovement {
+        0% {
+          opacity: 1;
+          left: -100%;
+        }
+        40% {
+          opacity: 1;
+          left: 40%;
+        }
+        50% {
+          opacity: 1;
+          left: 100%;
+        }
+        100% {
+          opacity: 0;
+          left: 100%;
+        }
+      }
+      @-webkit-keyframes progressLinearMovementLeftToRight {
+        0% {
+          opacity: 1;
+          left: 100%;
+        }
+        40% {
+          opacity: 1;
+          left: -40%;
+        }
+        50% {
+          opacity: 1;
+          left: -100%;
+        }
+        100% {
+          opacity: 0;
+          left: -100%;
+        }
+      }
+      @keyframes progressLinearMovementLeftToRight {
+        0% {
+          opacity: 1;
+          left: 100%;
+        }
+        40% {
+          opacity: 1;
+          left: -40%;
+        }
+        50% {
+          opacity: 1;
+          left: -100%;
+        }
+        100% {
+          opacity: 0;
+          left: -100%;
+        }
+      }
+      .grit-progress-bar {
+        display: grid;
+        grid-template-rows: 1fr 20px;
+        -ms-flex-align: end;
+        align-items: end;
+      }
+      .grit-progress-bar .grit-loader-container {
+        grid-row: 0.5;
+        grid-column: -1;
+      }
+      .grit-loader-container {
+        -ms-flex-item-align: end;
+        align-self: end;
+        width: 100%;
+        margin: 24px 0;
+      }
+      .grit-load-bar-wrapper {
+        background: var(--neutral400);
+        height: 4px;
+        position: relative;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .grit-prefilled-bar-percentage {
+        margin: 16px 0;
+        position: absolute;
+        left: 0;
+        font-family: var(--grit-font-family-header);
+        font-size: 1rem;
+        font-weight: var(--grit-font-weight-semibold);
+        line-height: var(--grit-common-line-height);
+        letter-spacing: var(--grit-common-letter-spacing);
+        color: var(--neutral900);
+        width: 100%;
+        display: grid;
+      }
+      .grit-prefilled-bar {
+        background: var(--blue400);
+        height: 4px;
+        position: relative;
+      }
+      .grit-load-bar-wrapper .grit-bar {
+        background: var(--blue400);
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        opacity: 0;
+      }
+      .grit-load-bar-wrapper .grit-bar.grit-bar-determinate-fill {
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+      }
+      .grit-load-bar-wrapper .slow-bar-animation {
+        -webkit-animation: progressLinearMovement 3s
+          cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        animation: progressLinearMovement 3s cubic-bezier(0.4, 0, 0.2, 1)
+          infinite;
+        -webkit-animation-delay: 250ms;
+        animation-delay: 250ms;
+      }
+      .grit-load-bar-wrapper .faster-bar-animation {
+        left: -100%;
+        -webkit-animation: progressLinearMovement 3s
+          cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        animation: progressLinearMovement 3s cubic-bezier(0.4, 0, 0.2, 1)
+          infinite;
+        -webkit-animation-delay: 1.4s;
+        animation-delay: 1.4s;
+      }
+      .grit-message-container {
+        font-family: var(--grit-font-family-header);
+        font-size: 1rem;
+        font-weight: var(--grit-font-weight-semibold);
+        line-height: var(--grit-common-line-height);
+        letter-spacing: var(--grit-common-letter-spacing);
+        color: var(--neutral900);
+        width: 100%;
+        display: grid;
+        text-align: center;
+      }
+      .grit-stop-animation {
+        -webkit-animation: none !important;
+        animation: none !important;
+      }
+      .determinate-loader-progress-indicator {
+        margin: 16px 0;
+        font-family: var(--grit-font-family-header);
+        font-size: 0.85rem;
+        font-weight: var(--grit-font-weight-bold);
+        line-height: var(--grit-common-line-height);
+        letter-spacing: var(--grit-common-letter-spacing);
+        color: var(--neutral900);
+      }
+      @keyframes progressLinearMovement {
+        0% {
+          opacity: 1;
+          left: -100%;
+        }
+        40% {
+          opacity: 1;
+          left: 40%;
+        }
+        50% {
+          opacity: 1;
+          left: 100%;
+        }
+        100% {
+          opacity: 0;
+          left: 100%;
+        }
+      }
+      @keyframes progressLinearMovementLeftToRight {
+        0% {
+          opacity: 1;
+          left: 100%;
+        }
+        40% {
+          opacity: 1;
+          left: -40%;
+        }
+        50% {
+          opacity: 1;
+          left: -100%;
+        }
+        100% {
+          opacity: 0;
+          left: -100%;
+        }
+      }
+      grit-wc-linear-loader
+        p.grit-message-group__message-wrapper.grit-message-group__current-message {
+        font-family: var(--grit-font-family-header);
+        font-size: 1rem;
+        font-weight: var(--grit-font-weight-semibold);
+        line-height: var(--grit-common-line-height);
+        letter-spacing: var(--grit-common-letter-spacing);
+        color: var(--neutral900);
+        width: 100%;
+        display: grid;
+        text-align: center;
+        margin-top: 20px;
+      }
+      grit-wc-linear-loader button.grit-button-primary.grit-button-md {
+        margin-top: 20px;
+      }
+    </style>
+    <style>
+      .grit-message-group {
+        display: block;
+        width: 100%;
+        position: relative;
+        font-size: var(--grit-message-group-font-size);
+        font-family: var(--grit-message-group-font-family);
+        line-height: var(--grit-message-group-line-height);
+        font-weight: var(--grit-message-group-font-weight);
+        min-height: var(--grit-message-group-min-height);
+        margin-top: var(--grit-message-group-margin-top);
+        -webkit-transition: all
+          var(--grit-message-group-message-transition-duration) ease-in-out;
+        transition: all var(--grit-message-group-message-transition-duration)
+          ease-in-out;
+      }
+      .grit-message-group__message-wrapper {
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+        margin: 0;
+        -webkit-transition: all
+          var(--grit-message-group-message-transition-duration) ease-in-out;
+        transition: all var(--grit-message-group-message-transition-duration)
+          ease-in-out;
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-transform: translate(0, 0) scale(1);
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+      .grit-message-group--neutral {
+        color: var(--grit-message-group-neutral-color);
+      }
+      .grit-message-group--hint {
+        color: var(--grit-message-group-hint-color);
+      }
+      .grit-message-group--error {
+        color: var(--grit-message-group-error-color);
+      }
+    </style>
+    <style>
+      :host {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+      }
+      .grit-checkbox {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+      .grit-checkbox-flex-parent {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .grit-checkbox * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all var(--grit-checkbox-transition-curve-duration)
+          var(--grit-checkbox-transition-curve-check);
+        transition: all var(--grit-checkbox-transition-curve-duration)
+          var(--grit-checkbox-transition-curve-check);
+      }
+      .checkbox {
+        --background: var(--grit-checkbox-check-color);
+        --border: var(--grit-checkbox-border-color);
+        --border-active: var(--grit-checkbox-border-color);
+        --border-disable: var(--grit-checkbox-disabled-border-color);
+        --border-error: var(--grit-checkbox-error-border-color);
+        --tick: var(--grit-checkbox-check-color);
+        position: relative;
+      }
+      .checkbox input,
+      .checkbox svg {
+        width: 16px;
+        height: 16px;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .checkbox input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        outline: none;
+        background: var(--background);
+        border: none;
+        min-height: 16px;
+        min-width: 16px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 2px;
+        -webkit-transition: -webkit-box-shadow 0.3s;
+        transition: -webkit-box-shadow 0.3s;
+        transition: box-shadow 0.3s;
+        transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+        -webkit-box-shadow: inset 0 0 0 var(--full-shadow, 1px)
+          var(--border-color, var(--border));
+        box-shadow: inset 0 0 0 var(--full-shadow, 1px)
+          var(--border-color, var(--border));
+      }
+      .checkbox input:checked + svg polyline {
+        display: block;
+      }
+      .checkbox input:checked + svg line {
+        display: none;
+      }
+      .checkbox input:checked:disabled {
+        background: var(--grit-checkbox-disabled-background-color);
+      }
+      .checkbox input:indeterminate + svg line {
+        display: block;
+      }
+      .checkbox input:indeterminate + svg polyline {
+        display: none;
+      }
+      .checkbox input:hover {
+        background: var(--grit-input-control-hover-background);
+        -webkit-transition: all var(--grit-checkbox-transition-curve-duration)
+          var(--grit-checkbox-transition-curve-check);
+        transition: all var(--grit-checkbox-transition-curve-duration)
+          var(--grit-checkbox-transition-curve-check);
+      }
+      .checkbox input:disabled {
+        --border-color: var(--border-disable);
+        background: var(--grit-checkbox-check-color);
+      }
+      .checkbox input.error {
+        background-color: rgba(216, 8, 0, 0.3);
+        --border-color: var(--border-error);
+      }
+      .checkbox svg {
+        pointer-events: none;
+        fill: none;
+        stroke-width: 1.13px;
+        stroke-linecap: square;
+        stroke-linejoin: square;
+        stroke: var(--stroke, var(--border-active));
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        -webkit-transform: scale(1, 0) translateZ(0);
+        transform: scale(1, 0) translateZ(0);
+      }
+      .checkbox svg line {
+        stroke-width: 2px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .checkbox.animation {
+        --stroke: var(--grit-checkbox-check-color);
+      }
+      .checkbox.animation input + svg {
+        -webkit-animation: hide 0.3s linear forwards;
+        animation: hide 0.3s linear forwards;
+      }
+      .checkbox.animation input:checked {
+        --full-shadow: 11px;
+      }
+      .checkbox.animation input:checked + svg {
+        -webkit-animation: show 0.3s linear forwards;
+        animation: show 0.3s linear forwards;
+      }
+      .checkbox.animation input:indeterminate {
+        --full-shadow: 11px;
+      }
+      .checkbox.animation input:indeterminate + svg {
+        -webkit-animation: show 0.3s linear forwards;
+        animation: show 0.3s linear forwards;
+      }
+      .grit-checkbox .grit-checkbox-control-wrapper.align-right {
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+      .grit-checkbox
+        .grit-checkbox-control-wrapper.align-right
+        .grit-checkbox-label {
+        margin-left: 8px;
+      }
+      .grit-checkbox .grit-checkbox-control-wrapper.align-left {
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+      }
+      .grit-checkbox
+        .grit-checkbox-control-wrapper.align-left
+        .grit-checkbox-label {
+        margin-right: 8px;
+      }
+      .grit-checkbox .grit-checkbox-control-wrapper {
+        height: 16px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      label.grit-checkbox-label {
+        font-family: var(--grit-checkbox-label-font-family);
+        color: var(--grit-checkbox-label-color);
+        cursor: pointer;
+        font-size: var(--grit-font-size-0);
+      }
+      .grit-checkbox
+        .grit-checkbox-control-wrapper
+        .grit-checkbox-custom.disabled {
+        pointer-events: none;
+        border: 1px solid var(--neutral500);
+      }
+      span.grit-checkbox-label.disabled {
+        pointer-events: none;
+        color: var(--neutral500);
+      }
+      @-webkit-keyframes show {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes show {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes hide {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        50% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+      }
+      @keyframes hide {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        50% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+      }
+    </style>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://wfca-esign-dmo.progressivelp.com/checkoutui/favicon.ico"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <style type="text/css">
+      @font-face {
+        font-family: "Arizonia";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/arizonia/v11/neIIzCemt4A5qa7mv6WF.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh7USeww.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6uyw4BMUTPHvxo.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh6UVeww.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD7g0.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW0.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC7g0.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF7g0.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE7g0.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H7g0.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Me5g.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Arizonia";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/arizonia/v11/neIIzCemt4A5qa7mv5WPFqwYUp31kXI.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Arizonia";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/arizonia/v11/neIIzCemt4A5qa7mv5WBFqwYUp31.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6uyw4BMUTPHjx4wXiWtFCc.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD3gTD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD3g3D_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD3gbD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD3gfD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD3gnD_vx3rCs.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2)
+          format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gTD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3g3D_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gbD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gfD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gnD_vx3rCs.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gTD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3g3D_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gbD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gfD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gnD_vx3rCs.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gTD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3g3D_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gbD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gfD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gnD_vx3rCs.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H3gTD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H3g3D_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H3gbD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H3gfD_vx3rCubqg.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H3gnD_vx3rCs.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2)
+          format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="public/proganywhere-contract_files/styles.d77fe76a68f94b038e52.css"
+    />
+    <style>
+      .page[_ngcontent-ylj-c25] {
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+      }
+      @media screen and (min-width: 600px) {
+        .page[_ngcontent-ylj-c25] {
+          display: grid;
+          grid-template-columns: minmax(auto, 600px);
+          justify-content: center;
+        }
+      }
+    </style>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/common.5f5002171e1dd6c72de7.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/136.c0cb4b6f141817a84768.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/138.380d2b8b165582777cc7.js"
+    ></script>
+    <style>
+      .page[_ngcontent-ylj-c20] {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        width: 100%;
+        height: 100%;
+      }
+      .page__body[_ngcontent-ylj-c20] {
+        padding: 32px 16px 24px;
+        overflow: auto;
+      }
+      .page__footer[_ngcontent-ylj-c20] {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        font-family: Roboto;
+        align-content: center;
+        padding: 0 16px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+      }
+      .page__footer--content[_ngcontent-ylj-c20] {
+        height: 42px;
+        color: #fff;
+        background-color: #65686d;
+      }
+      .page__footer--buttons[_ngcontent-ylj-c20] {
+        height: 72px;
+        background-color: #fff;
+      }
+      .page__footer--signed[_ngcontent-ylj-c20] {
+        color: #000;
+        background-color: #3ecf8d;
+      }
+      .page__footer--timed-out[_ngcontent-ylj-c20] {
+        color: var(--neutral900);
+        font-weight: var(--grit-font-weight-bold);
+        background-color: var(--red100);
+        border-top-color: var(--red200);
+        border-bottom-color: var(--red200);
+      }
+      .body__title[_ngcontent-ylj-c20] {
+        color: var(--neutral900);
+        font-family: var(--grit-font-family-header);
+        font-size: var(--grit-font-size-2);
+        font-weight: 700;
+        letter-spacing: 0.86px;
+        line-height: 25.6px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .body__contract[_ngcontent-ylj-c20] {
+        padding: 16px;
+        margin: 0 -16px;
+        background-color: var(--neutral100);
+      }
+      .footer[_ngcontent-ylj-c20] {
+        flex: 1;
+        font-family: Roboto, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8px;
+      }
+      .footer__left[_ngcontent-ylj-c20] {
+        gap: 8px;
+      }
+      .footer__left[_ngcontent-ylj-c20],
+      .footer__right[_ngcontent-ylj-c20] {
+        display: flex;
+        align-items: center;
+      }
+      .footer__right[_ngcontent-ylj-c20] {
+        text-justify: right;
+        font-style: italic;
+      }
+      .buttons[_ngcontent-ylj-c20] {
+        flex: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+      @media screen and (min-width: 600px) {
+        .page__body[_ngcontent-ylj-c20],
+        .page__footer[_ngcontent-ylj-c20] {
+          display: grid;
+          justify-content: center;
+          grid-template-columns: minmax(auto, 600px);
+        }
+      }
+    </style>
+    <style>
+      .page-card[_ngcontent-ylj-c6] {
+        position: relative;
+        border-radius: 6px;
+        border: 1px solid var(--neutral400);
+        padding: 16px;
+        margin-top: 40px;
+        margin-bottom: 56px;
+      }
+      .page-card[_ngcontent-ylj-c6],
+      .page-card__icon[_ngcontent-ylj-c6] {
+        background: var(--neutral100);
+      }
+      .page-card__icon[_ngcontent-ylj-c6] {
+        position: absolute;
+        top: calc((46px / 2) * -1);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border: 2px solid var(--blue500);
+        border-radius: 50%;
+      }
+      .page-card__wrapper--icon[_ngcontent-ylj-c6] {
+        position: relative;
+        margin-top: calc(60px / 2 + 24px);
+      }
+      .page-card__wrapper--icon[_ngcontent-ylj-c6]:before {
+        content: "";
+        position: absolute;
+        z-index: 9;
+        top: calc((60px / 2) * -1);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: var(--neutral100);
+        border: 1px solid var(--neutral400);
+        border-radius: 50%;
+      }
+      .page-card--icon[_ngcontent-ylj-c6] {
+        margin-bottom: 64px;
+        padding: 46px 16px 24px;
+        z-index: 10;
+      }
+      .page-card--icon[_ngcontent-ylj-c6]:before {
+        content: "";
+        position: absolute;
+        top: calc((58px / 2) * -1);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 58px;
+        height: 58px;
+        background-color: var(--neutral100);
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .page-card[_ngcontent-ylj-c6] [pageCardIcon] {
+        max-width: 24px;
+        max-height: 24px;
+        color: var(--blue500);
+        fill: var(--blue500);
+      }
+    </style>
+    <style>
+      .core-receipt-list[_ngcontent-ylj-c7] {
+        list-style-type: none;
+        margin: 0 0 24px;
+        padding: 0;
+      }
+      .core-receipt-list__item[_ngcontent-ylj-c7] {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        padding: 4px 8px;
+        color: var(--neutral900);
+        font-size: var(--grit-font-size-0);
+        font-weight: var(--grit-font-weight-regular);
+        border-radius: 3px;
+      }
+      .core-receipt-list__item--highlight[_ngcontent-ylj-c7] {
+        background-color: var(--neutral300);
+        font-weight: var(--grit-font-weight-regular);
+      }
+      .core-receipt-list__item--active[_ngcontent-ylj-c7] {
+        background-color: var(--blue100);
+        color: var(--blue800);
+        padding: 8px;
+        font-weight: var(--grit-font-weight-bold);
+      }
+      .core-receipt-list__item--active-highlight[_ngcontent-ylj-c7] {
+        background-color: var(--neutral300);
+        padding: 8px;
+        font-weight: var(--grit-font-weight-bold);
+      }
+      .core-receipt-list__item--emphasize[_ngcontent-ylj-c7] {
+        font-style: italic;
+        color: var(--neutral800);
+      }
+      .core-receipt-list__name[_ngcontent-ylj-c7] {
+        margin-right: 16px;
+      }
+      .core-receipt-list__amount[_ngcontent-ylj-c7] {
+        white-space: nowrap;
+      }
+      .core-receipt-list__amount--lg[_ngcontent-ylj-c7] {
+        font-size: var(--grit-font-size-1);
+      }
+      .core-receipt-list__amount--xl[_ngcontent-ylj-c7] {
+        font-size: 19.5px;
+      }
+    </style>
+    <style>
+      .icon-list[_ngcontent-ylj-c9] {
+        list-style: none;
+        margin: 16px 0 24px;
+        padding: 0;
+      }
+      .icon-list__item[_ngcontent-ylj-c9] {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 40px;
+        font-size: var(--grit-font-size-0);
+        line-height: 1.5;
+        letter-spacing: 0.52px;
+        border-top: 1px solid var(--neutral400);
+      }
+      .icon-list__icon[_ngcontent-ylj-c9] {
+        color: var(--neutral600);
+      }
+      .icon-list__label[_ngcontent-ylj-c9] {
+        flex: 1;
+        margin: 0 16px 0 8px;
+      }
+      .icon-list__value[_ngcontent-ylj-c9]:first-letter {
+        text-transform: uppercase;
+      }
+    </style>
+    <style>
+      .summary[_ngcontent-ylj-c10] {
+        padding: 16px;
+        border: 1px solid var(--neutral500);
+        border-radius: 4px;
+      }
+      .summary__header[_ngcontent-ylj-c10] {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        font-size: var(--grit-font-size-1);
+        line-height: 1.5;
+        letter-spacing: 0.64px;
+        font-weight: 400;
+      }
+      .summary__title[_ngcontent-ylj-c10] {
+        font-weight: 400;
+      }
+      .summary__last-four[_ngcontent-ylj-c10] {
+        display: flex;
+        align-items: center;
+      }
+      .summary__card-type[_ngcontent-ylj-c10] {
+        margin-right: 4px;
+      }
+      .summary__body[_ngcontent-ylj-c10] {
+        font-size: var(--grit-font-size-0);
+        line-height: 1.5;
+        letter-spacing: 0.52px;
+      }
+    </style>
+    <style>
+      .icon-bullet[_ngcontent-ylj-c13] {
+        display: flex;
+        align-items: flex-start;
+        padding: 0 8px 8px;
+      }
+      .icon-bullet__icon[_ngcontent-ylj-c13] {
+        margin-right: 16px;
+        color: var(--purple400);
+        fill: var(--purple400);
+      }
+      .icon-bullet__icon[_ngcontent-ylj-c13],
+      .icon-bullet__icon-wrap[_ngcontent-ylj-c13] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon-bullet__icon-wrap[_ngcontent-ylj-c13] {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--purple100);
+      }
+      .icon-bullet__content[_ngcontent-ylj-c13] {
+        font-size: var(--grit-font-size-0);
+        font-style: italic;
+        letter-spacing: 0.52px;
+        line-height: 1.5;
+      }
+    </style>
+    <style>
+      .checkbox[_ngcontent-ylj-c16] {
+        cursor: pointer;
+      }
+      .checkbox__control[_ngcontent-ylj-c16] {
+        margin: 2.2px 8px 0 0;
+      }
+      .checkbox__content[_ngcontent-ylj-c16] {
+        font-size: var(--grit-font-size-0);
+        line-height: 1.5;
+      }
+      .checkbox__definition[_ngcontent-ylj-c16] {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .checkbox--flex-start[_ngcontent-ylj-c16] {
+        display: flex;
+      }
+      .checkbox--flex-start[_ngcontent-ylj-c16]
+        .checkbox__control[_ngcontent-ylj-c16] {
+        flex: 0 0 16px;
+      }
+      .checkbox[_ngcontent-ylj-c16]:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    </style>
+    <style>
+      .checkbox[_ngcontent-ylj-c17] {
+        cursor: pointer;
+      }
+      .checkbox__control[_ngcontent-ylj-c17] {
+        margin: 2.2px 8px 0 0;
+      }
+      .checkbox__content[_ngcontent-ylj-c17] {
+        font-size: var(--grit-font-size-0);
+        line-height: 1.5;
+      }
+      .checkbox__definition[_ngcontent-ylj-c17] {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .checkbox--flex-start[_ngcontent-ylj-c17] {
+        display: flex;
+      }
+      .checkbox--flex-start[_ngcontent-ylj-c17]
+        .checkbox__control[_ngcontent-ylj-c17] {
+        flex: 0 0 16px;
+      }
+      .checkbox[_ngcontent-ylj-c17]:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    </style>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/130.3d75f627041bc0895edc.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/0.849202f77a027bfdc91a.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/36.c521646d08cc07ec2163.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/20.2b98dff01989bff5a810.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/1.779cd9bc3dde40ccaf50.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/35.e7086dda85b738b79fe5.js"
+    ></script>
+    <script
+      charset="utf-8"
+      src="public/proganywhere-contract_files/38.212fc64314cbd0dce165.js"
+    ></script>
+  </head>
+  <body
+    data-new-gr-c-s-check-loaded="14.1033.0"
+    data-gr-ext-installed=""
+    cz-shortcut-listen="true"
+  >
+    <svg
+      version="1.1"
+      display="none"
+      aria-hidden="true"
+      width="0"
+      height="0"
+      hidden=""
+    >
+      <defs>
+        <symbol id="checkout-sprite-download" viewBox="0 0 24 24">
+          <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></path>
+        </symbol>
+        <symbol id="checkout-sprite-alert" viewBox="0 0 24 24">
+          <path d="M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z"></path>
+        </symbol>
+        <symbol id="checkout-sprite-arrow-up" viewBox="0 0 24 24">
+          <path
+            d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-arrow-down" viewBox="0 0 24 24">
+          <path
+            d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-calendar" viewBox="0 0 24 24">
+          <path
+            d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-sync" viewBox="0 0 24 24">
+          <path
+            d="M12,18A6,6 0 0,1 6,12C6,11 6.25,10.03 6.7,9.2L5.24,7.74C4.46,8.97 4,10.43 4,12A8,8 0 0,0 12,20V23L16,19L12,15M12,4V1L8,5L12,9V6A6,6 0 0,1 18,12C18,13 17.75,13.97 17.3,14.8L18.76,16.26C19.54,15.03 20,13.57 20,12A8,8 0 0,0 12,4Z"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-credit-card-outline" viewBox="0 0 24 24">
+          <path
+            d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-cash-check" viewBox="0 0 24 24">
+          <path
+            d="M3 6V18H13.32C13.1 17.33 13 16.66 13 16H7C7 14.9 6.11 14 5 14V10C6.11 10 7 9.11 7 8H17C17 9.11 17.9 10 19 10V10.06C19.67 10.06 20.34 10.18 21 10.4V6H3M12 9C10.3 9.03 9 10.3 9 12C9 13.7 10.3 14.94 12 15C12.38 15 12.77 14.92 13.14 14.77C13.41 13.67 13.86 12.63 14.97 11.61C14.85 10.28 13.59 8.97 12 9M21.63 12.27L17.76 16.17L16.41 14.8L15 16.22L17.75 19L23.03 13.68L21.63 12.27Z"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-history" viewBox="0 0 24 24">
+          <path
+            d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-cellphone-iphone" viewBox="0 0 24 24">
+          <path
+            d="M16,18H7V4H16M11.5,22A1.5,1.5 0 0,1 10,20.5A1.5,1.5 0 0,1 11.5,19A1.5,1.5 0 0,1 13,20.5A1.5,1.5 0 0,1 11.5,22M15.5,1H7.5A2.5,2.5 0 0,0 5,3.5V20.5A2.5,2.5 0 0,0 7.5,23H15.5A2.5,2.5 0 0,0 18,20.5V3.5A2.5,2.5 0 0,0 15.5,1Z"
+          ></path>
+        </symbol>
+        <symbol id="checkout-sprite-piggy-bank" viewBox="0 0 21 21">
+          <path
+            d="M16.2542867,3.22810451 L16.4136052,3.23238715 C17.6646597,3.30956217 18.1415769,4.38443832 17.97393,6.24464788 L17.9507268,6.47162903 L17.93,6.63 L19.152,8.195 L20.0150639,8.19733282 L20.1806154,8.21611271 C21.1703668,8.42093326 21.8166161,8.91924084 21.9630336,9.69620065 L21.9856063,9.85530358 L21.9928571,10.0153434 L21.9928571,13.2431946 L21.4619116,13.5205878 L21.0088353,13.7612512 L20.622,13.976 L20.5945764,14.1224255 L20.5599428,14.2666089 L20.502605,14.4633292 L20.4702066,14.5615455 C20.2851637,15.1033527 19.9385109,15.7367415 19.4721434,16.3828248 C19.3050891,16.6142539 19.0562695,16.8789023 18.7140748,17.1915841 L18.5351424,17.3519964 L18.381,17.485 L18.3815296,18.5286794 L18.3350385,18.7030141 L18.1688412,18.992245 C17.7964654,19.6097623 17.4078646,19.972507 16.9083829,20.0830044 L16.7551174,20.1085888 L16.6110418,20.1162338 L13.9289489,20.1162338 L13.813875,20.0967758 L13.7112165,20.0610366 C13.051226,19.8312695 12.5880755,19.4619267 12.3832733,18.9576366 L12.3338697,18.8167605 L12.31,18.722 L12.2269357,18.7414832 C11.7175803,18.8467457 11.2323071,18.8865102 10.7695347,18.8589873 L10.4945586,18.8343847 L10.225,18.793 L10.1752421,18.9050904 C9.89569653,19.4948452 9.49702646,19.8920576 8.98286955,20.0464177 L8.82516151,20.0853898 L8.67452733,20.1080561 L8.51002765,20.1162338 L5.89362917,20.1156111 L5.79631537,20.109175 C4.95165327,20.0079135 4.3706337,19.4763316 4.24350843,18.679766 L4.22419167,18.5169687 L4.21831401,18.3596211 L4.217,17.48 L3.98623093,17.2628646 C3.0869511,16.3824246 2.49176522,15.3620312 2.21147583,14.214055 L2.14797008,13.9244101 L2.094,13.608 L2.0348745,13.5988332 C1.40627933,13.4707693 0.948652025,13.1031867 0.786857116,12.5524665 L0.752643823,12.4110037 L0.731190437,12.262106 L0.724594814,12.1209246 L0.721419304,11.8634528 L0.72625638,11.7421736 L0.737342353,11.6435514 C0.77942003,11.3482281 0.910576988,11.0930976 1.13627344,10.8987924 C1.37573969,10.6926326 1.61872846,10.6063326 1.999293,10.5805151 L2.17120592,10.5729803 L2.289,10.571 L2.352102,10.3868778 C2.88830007,8.87615935 3.6242709,7.68260596 4.56093203,6.8176363 L4.78064756,6.62386597 L5.0074907,6.44179251 L5.24404305,6.52294674 L5.62477654,8.40030955 L5.48813679,8.71883215 C4.96541173,9.34016356 4.53038305,10.1526029 4.18577788,11.1578293 L4.07426225,11.5000473 L4.013,11.706 L4.01300727,12.6417293 C4.01300727,13.8364857 4.4164107,14.8463418 5.24404305,15.7120463 L5.42789373,15.8953629 L5.62477654,16.0743558 L5.83164709,16.2469621 L6.20400718,16.5450417 L6.203,18.135 L8.337,18.13 L8.33860839,15.5599292 L9.87276181,16.5581323 C10.4824941,16.954857 11.3168377,16.9940062 12.4085349,16.6425966 L12.646421,16.5613047 L12.8934281,16.4676379 L14.252877,15.9275246 L14.252,18.129 L16.36,18.129 L16.395,18.079 L16.3958268,16.5524534 L16.8912475,16.1451342 L17.1360616,15.9373348 L17.3486416,15.7492305 L17.5280433,15.5822027 L17.6788642,15.4319921 C17.7613549,15.3462739 17.8230402,15.274688 17.8620725,15.2206145 C18.1284887,14.8515341 18.3408745,14.4956959 18.4772489,14.1985006 L18.539,14.055 L18.5151846,14.0087806 C18.4545253,13.8690099 18.4305005,13.7145149 18.4469451,13.5505775 L18.4669266,13.4259366 L18.5024437,13.29825 L18.5574895,13.1669606 L18.607958,13.0722009 C18.703646,12.908391 18.8188688,12.7886943 19.0061411,12.6503226 L19.1275705,12.5645564 L19.4077236,12.3865375 L19.6354,12.2528701 L20.007,12.045 L20.007,10.216 L19.869,10.18 L18.182393,10.1812832 L15.838011,7.17547278 L15.9421751,6.52294674 C16.015322,6.01363014 16.038325,5.60513615 16.0148836,5.32620236 L16.008,5.275 L15.9261326,5.31253724 C15.6654642,5.44214645 15.3344236,5.69875439 14.9581009,6.08005637 L14.7941205,6.25109911 L14.6440601,6.41592264 L14.4846449,6.59912025 L14.1402117,7.00356314 L13.6126252,6.94142781 L13.1239044,6.88910938 L12.6458933,6.84852419 L12.3832733,6.62386597 L12.4085349,5.05784687 L12.6458933,4.83310274 L13.326,4.914 L13.4764245,4.75492146 C14.2020369,4.00455693 14.8860492,3.5304419 15.5653731,3.33207418 L15.7505548,3.28481023 L15.9356704,3.25121743 L16.1251723,3.23227489 L16.2542867,3.22810451 Z"
+            fill-rule="nonzero"
+          ></path>
+          <path
+            d="M11.3345248,7.47114819 L12.1572548,8.4591647 C10.9978216,9.4246348 10.3435867,9.68507581 9.21999849,9.68507581 C8.19867748,9.68507581 7.75533035,9.61824341 6.86690877,9.02589917 L6.67765879,8.89450321 L7.43041132,7.85218615 C8.15597939,8.37618525 8.40138824,8.39935065 9.21999849,8.39935065 C9.95996207,8.39935065 10.2804041,8.30473576 11.1580673,7.61406547 L11.3345248,7.47114819 Z"
+            fill-rule="nonzero"
+          ></path>
+          <circle cx="15.2" cy="10.0422078" r="1"></circle>
+          <path
+            d="M8.67045455,1.46549439e-14 C10.486001,1.46549439e-14 11.9577922,1.4717912 11.9577922,3.28733766 C11.9577922,5.10288412 10.486001,6.57467532 8.67045455,6.57467532 C6.85490809,6.57467532 5.38311688,5.10288412 5.38311688,3.28733766 C5.38311688,1.4717912 6.85490809,1.46549439e-14 8.67045455,1.46549439e-14 Z M9.04799798,1.03360393 L8.3215369,1.03360393 L8.3215369,1.5566559 C7.85175875,1.65836045 7.47399899,1.9634741 7.47399899,2.43083072 C7.47399899,2.95025039 7.87279894,3.22746695 8.47070058,3.39432002 L8.61212133,3.43092546 C9.21750556,3.57621768 9.3385824,3.78931293 9.3385824,4.01451586 C9.3385824,4.1816019 9.2199271,4.44797096 8.68476744,4.44797096 C8.18593084,4.44797096 7.98978635,4.22518957 7.96314944,3.93944821 L7.43041132,3.93944821 C7.45946977,4.4697648 7.85660182,4.76761384 8.3215369,4.86689685 L8.3215369,5.39237036 L9.04799798,5.39237036 L9.04799798,4.87173992 C9.52019767,4.78214306 9.89553589,4.50850939 9.89553589,4.01209432 C9.89553589,3.37022561 9.38294496,3.12281987 8.86768209,2.97652604 L8.75741355,2.94661808 C8.20772467,2.80374741 8.03095248,2.65603365 8.03095248,2.42598765 C8.03095248,2.16204013 8.2755277,1.97800332 8.68476744,1.97800332 C9.11580101,1.97800332 9.27562245,2.18383396 9.29015167,2.48652607 L9.82531132,2.48652607 C9.80836056,2.07002172 9.55409919,1.68741889 9.04799798,1.56392051 L9.04799798,1.03360393 Z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <lite-root ng-version="11.2.14"
+      ><router-outlet></router-outlet
+      ><lite-contract-route _nghost-ylj-c20=""
+        ><main _ngcontent-ylj-c20="" class="page">
+          <div _ngcontent-ylj-c20="" class="page__body">
+            <div _ngcontent-ylj-c20="" class="body">
+              <h1
+                _ngcontent-ylj-c20=""
+                data-test-page-header=""
+                class="body__title"
+              >
+                Review payment details and sign
+              </h1>
+              <section
+                _ngcontent-ylj-c20=""
+                data-test-lease-summary=""
+                class="body__summary"
+              >
+                <lite-lease-summary _ngcontent-ylj-c20=""
+                  ><lite-agreement
+                    ><ui-page-card class="card" _nghost-ylj-c6=""
+                      ><div
+                        _ngcontent-ylj-c6=""
+                        class="page-card__wrapper page-card__wrapper--icon"
+                      >
+                        <section
+                          _ngcontent-ylj-c6=""
+                          class="page-card page-card--icon"
+                        >
+                          <div _ngcontent-ylj-c6="" class="page-card__icon">
+                            <svg pageCardIcon="" icon="">
+                              <use href="#checkout-sprite-calendar"></use>
+                            </svg>
+                          </div>
+                          <!---->
+                          <h2
+                            data-test-lease-summary-agreement-header=""
+                            class="card__header"
+                          >
+                            12-month lease-to-own agreement
+                          </h2>
+                          <p
+                            data-test-lease-summary-agreement-subheader=""
+                            class="card__subheader"
+                          >
+                            This is what you will pay if you complete all
+                            standard automatic payments.
+                          </p>
+                          <ui-receipt
+                            data-test-lease-summary-agreement-receipt=""
+                            _nghost-ylj-c7=""
+                            ><ul _ngcontent-ylj-c7="" class="core-receipt-list">
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Cash price</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Agreement_LeasableInvoiceAmountFromRetailer"
+                                  >
+                                    $900.00
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Lease-to-own cost</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__add-sign"
+                                    data-test-receipt-plus="Agreement_FullTermLeaseToOwnCost"
+                                    >+</span
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Agreement_FullTermLeaseToOwnCost"
+                                  >
+                                    $1,080.00
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--highlight
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Subtotal</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Agreement_FullTermTotalCost"
+                                  >
+                                    $1,980.00
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Estimated Tax</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__add-sign"
+                                    data-test-receipt-plus="Agreement_FullTermEstimatedTax"
+                                    >+</span
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Agreement_FullTermEstimatedTax"
+                                  >
+                                    $143.62
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--active
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >12-month lease-to-own total</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--xl
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Agreement_FullTermTotalCostWithEstimatedTax"
+                                  >
+                                    $2,123.62
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <!---->
+                            </ul></ui-receipt
+                          >
+                          <p
+                            data-test-lease-summary-agreement-notice=""
+                            class="card__notice"
+                          >
+                            <em
+                              >12-month lease-to-own total includes initial
+                              payment (see 'Payment due at signing' below).</em
+                            >
+                          </p>
+                        </section>
+                      </div></ui-page-card
+                    ></lite-agreement
+                  ><lite-frequency
+                    ><ui-page-card class="card" _nghost-ylj-c6=""
+                      ><div
+                        _ngcontent-ylj-c6=""
+                        class="page-card__wrapper page-card__wrapper--icon"
+                      >
+                        <section
+                          _ngcontent-ylj-c6=""
+                          class="page-card page-card--icon"
+                        >
+                          <div _ngcontent-ylj-c6="" class="page-card__icon">
+                            <svg pageCardIcon="" icon="">
+                              <use href="#checkout-sprite-sync"></use>
+                            </svg>
+                          </div>
+                          <!---->
+                          <h2
+                            data-test-lease-summary-frequency-header=""
+                            class="card__header"
+                          >
+                            Paying every week
+                          </h2>
+                          <p
+                            data-test-lease-summary-frequency-subheader=""
+                            class="card__subheader"
+                          >
+                            Once authorized, you will make automatic recurring
+                            payments.
+                          </p>
+                          <ui-receipt
+                            data-test-lease-summary-frequency-receipt=""
+                            _nghost-ylj-c7=""
+                            ><ul _ngcontent-ylj-c7="" class="core-receipt-list">
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Payment</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Frequency_RecurringPayment"
+                                  >
+                                    $37.36
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Estimated taxes</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__add-sign"
+                                    data-test-receipt-plus="Frequency_RecurringPaymentEstimatedTax"
+                                    >+</span
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Frequency_RecurringPaymentEstimatedTax"
+                                  >
+                                    $2.71
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--active
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Recurring payment</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--lg
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Frequency_TotalRecurringPaymentWithEstimatedTax"
+                                  >
+                                    $40.07
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <!---->
+                            </ul></ui-receipt
+                          >
+                          <p class="card__notice">
+                            <em
+                              >Tax is estimated based on today's tax rate and
+                              could change at any time.</em
+                            >
+                          </p>
+                          <ui-icon-list
+                            data-test-lease-summary-frequency-icon-list=""
+                            _nghost-ylj-c9=""
+                            ><ul _ngcontent-ylj-c9="" class="icon-list">
+                              <li _ngcontent-ylj-c9="" class="icon-list__item">
+                                <svg
+                                  _ngcontent-ylj-c9=""
+                                  icon=""
+                                  class="icon-list__icon"
+                                >
+                                  <use
+                                    _ngcontent-ylj-c9=""
+                                    href="#checkout-sprite-calendar"
+                                  ></use>
+                                </svg>
+                                <p
+                                  _ngcontent-ylj-c9=""
+                                  class="icon-list__label"
+                                >
+                                  Standard time to ownership
+                                </p>
+                                <p
+                                  _ngcontent-ylj-c9=""
+                                  class="icon-list__value"
+                                  data-test-icon-list="Frequency_TermMonths"
+                                >
+                                  12 Months
+                                </p>
+                              </li>
+                              <li _ngcontent-ylj-c9="" class="icon-list__item">
+                                <svg
+                                  _ngcontent-ylj-c9=""
+                                  icon=""
+                                  class="icon-list__icon"
+                                >
+                                  <use
+                                    _ngcontent-ylj-c9=""
+                                    href="#checkout-sprite-history"
+                                  ></use>
+                                </svg>
+                                <p
+                                  _ngcontent-ylj-c9=""
+                                  class="icon-list__label"
+                                >
+                                  Payment frequency
+                                </p>
+                                <p
+                                  _ngcontent-ylj-c9=""
+                                  class="icon-list__value"
+                                  data-test-icon-list="Frequency_Frequency"
+                                >
+                                  every week
+                                </p>
+                              </li>
+                              <li _ngcontent-ylj-c9="" class="icon-list__item">
+                                <svg
+                                  _ngcontent-ylj-c9=""
+                                  icon=""
+                                  class="icon-list__icon"
+                                >
+                                  <use
+                                    _ngcontent-ylj-c9=""
+                                    href="#checkout-sprite-sync"
+                                  ></use>
+                                </svg>
+                                <p
+                                  _ngcontent-ylj-c9=""
+                                  class="icon-list__label"
+                                >
+                                  Number of recurring payments
+                                </p>
+                                <p
+                                  _ngcontent-ylj-c9=""
+                                  class="icon-list__value"
+                                  data-test-icon-list="Frequency_NumberOfPayments"
+                                >
+                                  52
+                                </p>
+                              </li>
+                              <!---->
+                            </ul></ui-icon-list
+                          ><ui-summary-card
+                            data-test-lease-summary-frequency-summary=""
+                            _nghost-ylj-c10=""
+                            ><div
+                              _ngcontent-ylj-c10=""
+                              class="card__summary summary"
+                            >
+                              <div
+                                _ngcontent-ylj-c10=""
+                                class="summary__header"
+                              >
+                                <h3
+                                  _ngcontent-ylj-c10=""
+                                  class="summary__title"
+                                >
+                                  Automatic payment
+                                </h3>
+                                <p
+                                  _ngcontent-ylj-c10=""
+                                  class="summary__last-four"
+                                >
+                                  <img
+                                    _ngcontent-ylj-c10=""
+                                    class="summary__card-type"
+                                    src="public/proganywhere-contract_files/visa.svg"
+                                    alt="visa"
+                                  /><!----><span
+                                    _ngcontent-ylj-c10=""
+                                    aria-label="masked last four of account"
+                                    data-test-summary-card="Frequency_LastFour"
+                                    >••• 1115</span
+                                  >
+                                </p>
+                              </div>
+                              <p _ngcontent-ylj-c10="" class="summary__body">
+                                Once authorized, payments will be automatically
+                                withdrawn from the card ending in ••• 1115.
+                              </p>
+                            </div></ui-summary-card
+                          >
+                        </section>
+                      </div></ui-page-card
+                    ></lite-frequency
+                  ><lite-payment
+                    ><ui-page-card class="card" _nghost-ylj-c6=""
+                      ><div
+                        _ngcontent-ylj-c6=""
+                        class="page-card__wrapper page-card__wrapper--icon"
+                      >
+                        <section
+                          _ngcontent-ylj-c6=""
+                          class="page-card page-card--icon"
+                        >
+                          <div _ngcontent-ylj-c6="" class="page-card__icon">
+                            <svg pageCardIcon="" icon="">
+                              <use
+                                href="#checkout-sprite-credit-card-outline"
+                              ></use>
+                            </svg>
+                          </div>
+                          <!---->
+                          <h2
+                            data-test-lease-summary-payment-header=""
+                            class="card__header"
+                          >
+                            Payment due at signing
+                          </h2>
+                          <ui-receipt
+                            data-test-lease-summary-payment-receipt=""
+                            _nghost-ylj-c7=""
+                            ><ul _ngcontent-ylj-c7="" class="core-receipt-list">
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Initial payment</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Payment_InitialPayment"
+                                  >
+                                    $37.36
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Taxes</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__add-sign"
+                                    data-test-receipt-plus="Payment_DueAtSigningTax"
+                                    >+</span
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Payment_DueAtSigningTax"
+                                  >
+                                    $2.71
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--active
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Payment due at signing</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--lg
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Payment_TotalDueAtSigningWithTax"
+                                  >
+                                    $40.07
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <!---->
+                            </ul></ui-receipt
+                          ><ui-summary-card
+                            data-test-lease-summary-payment-summary=""
+                            _nghost-ylj-c10=""
+                            ><div
+                              _ngcontent-ylj-c10=""
+                              class="card__summary summary"
+                            >
+                              <div
+                                _ngcontent-ylj-c10=""
+                                class="summary__header"
+                              >
+                                <h3
+                                  _ngcontent-ylj-c10=""
+                                  class="summary__title"
+                                >
+                                  Charging
+                                </h3>
+                                <p
+                                  _ngcontent-ylj-c10=""
+                                  class="summary__last-four"
+                                >
+                                  <img
+                                    _ngcontent-ylj-c10=""
+                                    class="summary__card-type"
+                                    src="public/proganywhere-contract_files/visa.svg"
+                                    alt="visa"
+                                  /><!----><span
+                                    _ngcontent-ylj-c10=""
+                                    aria-label="masked last four of account"
+                                    data-test-summary-card="Payment_LastFour"
+                                    >••• 1115</span
+                                  >
+                                </p>
+                              </div>
+                              <p _ngcontent-ylj-c10="" class="summary__body">
+                                Once authorized, this card will be charged when
+                                you sign your lease agreement.
+                              </p>
+                            </div></ui-summary-card
+                          >
+                        </section>
+                      </div></ui-page-card
+                    ></lite-payment
+                  ><lite-options
+                    ><ui-page-card class="card" _nghost-ylj-c6=""
+                      ><div
+                        _ngcontent-ylj-c6=""
+                        class="page-card__wrapper page-card__wrapper--icon"
+                      >
+                        <section
+                          _ngcontent-ylj-c6=""
+                          class="page-card page-card--icon"
+                        >
+                          <div _ngcontent-ylj-c6="" class="page-card__icon">
+                            <svg pageCardIcon="" icon="">
+                              <use href="#checkout-sprite-piggy-bank"></use>
+                            </svg>
+                          </div>
+                          <!---->
+                          <h2
+                            data-test-lease-summary-options-header=""
+                            class="card__header"
+                          >
+                            Options to save money
+                          </h2>
+                          <div class="card__definition">
+                            <p
+                              data-test-lease-summary-options-in-full-header=""
+                              class="card__definition-header"
+                            >
+                              Purchase in full today
+                            </p>
+                            <p
+                              data-test-lease-summary-options-in-full-body=""
+                              class="card__definition-body"
+                            >
+                              Purchase the item from the retailer today at a
+                              cost of $900.00 (before tax).
+                            </p>
+                          </div>
+                          <hr class="card__hr" />
+                          <div class="card__definition">
+                            <p
+                              data-test-lease-summary-options-purchase-header=""
+                              class="card__definition-header"
+                            >
+                              3 months purchase option
+                            </p>
+                            <p
+                              data-test-lease-summary-options-purchase-body=""
+                              class="card__definition-body"
+                            >
+                              This option is the least expensive way to own your
+                              items through Progressive Leasing.
+                            </p>
+                          </div>
+                          <ui-receipt
+                            data-test-lease-summary-agreement-receipt=""
+                            _nghost-ylj-c7=""
+                            ><ul _ngcontent-ylj-c7="" class="core-receipt-list">
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Cash Price</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Options_LeasableInvoiceAmountFromRetailer"
+                                  >
+                                    $900.00
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >3 months lease-to-own cost</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__add-sign"
+                                    data-test-receipt-plus="Options_NinetyDayLeaseToOwnCost"
+                                    >+</span
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Options_NinetyDayLeaseToOwnCost"
+                                  >
+                                    $0.00
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--highlight
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Subtotal</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Options_NinetyDayTotalCost"
+                                  >
+                                    $900.00
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--undefined
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >Estimated tax</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--undefined
+                                  "
+                                  ><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__add-sign"
+                                    data-test-receipt-plus="Options_NinetyDayEstimatedTax"
+                                    >+</span
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Options_NinetyDayEstimatedTax"
+                                  >
+                                    $65.25
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <li
+                                _ngcontent-ylj-c7=""
+                                class="
+                                  core-receipt-list__item
+                                  core-receipt-list__item--active
+                                "
+                              >
+                                <span
+                                  _ngcontent-ylj-c7=""
+                                  class="core-receipt-list__name"
+                                  >3 months lease-to-own total</span
+                                ><span
+                                  _ngcontent-ylj-c7=""
+                                  class="
+                                    core-receipt-list__amount
+                                    core-receipt-list__amount--lg
+                                  "
+                                  ><!----><span
+                                    _ngcontent-ylj-c7=""
+                                    class="core-receipt-list__text"
+                                    data-test-receipt="Options_NinetyDayTotalCostWithEstimatedTax"
+                                  >
+                                    $965.25
+                                  </span></span
+                                ><!---->
+                              </li>
+                              <!---->
+                            </ul></ui-receipt
+                          ><ui-icon-bullet
+                            data-test-lease-summary-options-contact=""
+                            _nghost-ylj-c13=""
+                            ><div _ngcontent-ylj-c13="" class="icon-bullet">
+                              <div
+                                _ngcontent-ylj-c13=""
+                                class="icon-bullet__icon"
+                              >
+                                <div
+                                  _ngcontent-ylj-c13=""
+                                  class="icon-bullet__icon-wrap"
+                                >
+                                  <svg width="20" height="20" iconBulletIcon="">
+                                    <use
+                                      href="#checkout-sprite-cellphone-iphone"
+                                    ></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div
+                                _ngcontent-ylj-c13=""
+                                class="icon-bullet__content"
+                              >
+                                <p>
+                                  To use the 3 months purchase option or another
+                                  early purchase option or to cancel your lease
+                                  call (877) 898-1970 after you receive your
+                                  items.
+                                </p>
+                              </div>
+                            </div></ui-icon-bullet
+                          >
+                          <hr class="card__hr" />
+                          <div class="card__definition">
+                            <p
+                              data-test-lease-summary-options-early-purchase-header=""
+                              class="card__definition-header"
+                            >
+                              Early purchase option
+                            </p>
+                            <p
+                              data-test-lease-summary-options-early-purchase-body=""
+                              class="card__definition-body"
+                            >
+                              Save money by paying off your lease agreement
+                              anytime before 12 months.
+                            </p>
+                          </div>
+                          <hr class="card__hr" />
+                          <div class="card__definition">
+                            <p
+                              data-test-lease-summary-options-early-cancel-header=""
+                              class="card__definition-header"
+                            >
+                              Cancel anytime
+                            </p>
+                            <p
+                              data-test-lease-summary-options-early-cancel-body=""
+                              class="card__definition-body"
+                            >
+                              You can cancel your lease agreement at any time
+                              and return the item with no penalty.
+                            </p>
+                          </div>
+                        </section>
+                      </div></ui-page-card
+                    ></lite-options
+                  ></lite-lease-summary
+                >
+              </section>
+              <section
+                _ngcontent-ylj-c20=""
+                data-test-informed-consent=""
+                class="informed-consent"
+              >
+                <lite-disclosure-consent _ngcontent-ylj-c20=""
+                  ><ui-page-card class="card" _nghost-ylj-c6=""
+                    ><div _ngcontent-ylj-c6="" class="page-card__wrapper">
+                      <section _ngcontent-ylj-c6="" class="page-card">
+                        <!---->
+                        <p class="card__definition-header">
+                          Your informed consent to be charged
+                        </p>
+                        <lite-recurring-payment-consent _nghost-ylj-c16=""
+                          ><label
+                            _ngcontent-ylj-c16=""
+                            class="checkbox checkbox--flex-start"
+                            ><grit-wc-checkbox
+                              _ngcontent-ylj-c16=""
+                              data-test-disclosure-consent-recurring-payment-input=""
+                              class="checkbox__control hydrated"
+                              id="_zexfi"
+                              ><!---->
+                              <div class="grit-component grit-checkbox">
+                                <div class="grit-checkbox-flex-parent">
+                                  <div
+                                    class="
+                                      grit-checkbox-control-wrapper
+                                      align-right
+                                    "
+                                  >
+                                    <div
+                                      id="-label_zexfi"
+                                      class="checkbox animation"
+                                    >
+                                      <input
+                                        aria-labelledby="-label_zexfi"
+                                        aria-checked="false"
+                                        id="-control-checkbox_zexfi"
+                                        type="checkbox"
+                                        class=""
+                                      /><svg viewBox="0 0 16 16">
+                                        <polyline
+                                          points="3.5 8 7 11.5 13 4"
+                                        ></polyline>
+                                        <line
+                                          x1="3"
+                                          y1="8"
+                                          x2="13"
+                                          y2="8"
+                                        ></line>
+                                      </svg>
+                                    </div>
+                                    <label
+                                      for="-control-checkbox_zexfi"
+                                      id="-checkbox-label-text_zexfi"
+                                      class="grit-checkbox-label"
+                                    ></label>
+                                  </div>
+                                </div></div></grit-wc-checkbox
+                            ><span
+                              _ngcontent-ylj-c16=""
+                              data-test-disclosure-consent-recurring-payment-text=""
+                              class="checkbox__content"
+                              ><span
+                                _ngcontent-ylj-c16=""
+                                class="checkbox__definition"
+                                ><span _ngcontent-ylj-c16=""
+                                  ><strong _ngcontent-ylj-c16=""
+                                    >Recurring Payment.
+                                  </strong></span
+                                ><span _ngcontent-ylj-c16=""
+                                  >You authorize Progressive Leasing to charge
+                                  <strong _ngcontent-ylj-c16="">$40.07</strong>
+                                  (including estimated taxes) to the card ending
+                                  in ••• 1115 every week, until you pay the
+                                  12-month lease-to-own total of $2,123.62
+                                  (including estimated taxes). You will receive
+                                  a welcome email with your first payment
+                                  date.</span
+                                ></span
+                              ></span
+                            ></label
+                          ></lite-recurring-payment-consent
+                        ><lite-initial-payment-consent _nghost-ylj-c17=""
+                          ><label
+                            _ngcontent-ylj-c17=""
+                            class="checkbox checkbox--flex-start"
+                            ><grit-wc-checkbox
+                              _ngcontent-ylj-c17=""
+                              data-test-disclosure-consent-initial-payment-input=""
+                              class="checkbox__control hydrated"
+                              id="_wvbpv"
+                              ><!---->
+                              <div class="grit-component grit-checkbox">
+                                <div class="grit-checkbox-flex-parent">
+                                  <div
+                                    class="
+                                      grit-checkbox-control-wrapper
+                                      align-right
+                                    "
+                                  >
+                                    <div
+                                      id="-label_wvbpv"
+                                      class="checkbox animation"
+                                    >
+                                      <input
+                                        aria-labelledby="-label_wvbpv"
+                                        aria-checked="false"
+                                        id="-control-checkbox_wvbpv"
+                                        type="checkbox"
+                                        class=""
+                                      /><svg viewBox="0 0 16 16">
+                                        <polyline
+                                          points="3.5 8 7 11.5 13 4"
+                                        ></polyline>
+                                        <line
+                                          x1="3"
+                                          y1="8"
+                                          x2="13"
+                                          y2="8"
+                                        ></line>
+                                      </svg>
+                                    </div>
+                                    <label
+                                      for="-control-checkbox_wvbpv"
+                                      id="-checkbox-label-text_wvbpv"
+                                      class="grit-checkbox-label"
+                                    ></label>
+                                  </div>
+                                </div></div></grit-wc-checkbox
+                            ><span
+                              _ngcontent-ylj-c17=""
+                              data-test-disclosure-consent-initial-payment-text=""
+                              class="checkbox__content"
+                              ><span
+                                _ngcontent-ylj-c17=""
+                                class="checkbox__definition"
+                                ><span _ngcontent-ylj-c17=""
+                                  ><strong _ngcontent-ylj-c17=""
+                                    >Payment due at lease signing.
+                                  </strong></span
+                                ><span _ngcontent-ylj-c17=""
+                                  >You authorize Progressive Leasing to charge
+                                  <strong _ngcontent-ylj-c17="">$40.07</strong>
+                                  at the time of signing to the card ending in
+                                  ••• 1115.</span
+                                ></span
+                              ><span
+                                _ngcontent-ylj-c17=""
+                                class="checkbox__definition"
+                                ><span _ngcontent-ylj-c17=""
+                                  ><strong _ngcontent-ylj-c17=""
+                                    >Have an existing lease agreement?
+                                  </strong></span
+                                ><span _ngcontent-ylj-c17=""
+                                  >You consent to Progressive Leasing using
+                                  payment methods you provide here for upcoming
+                                  payments on existing lease agreements, even if
+                                  you've been using different payment
+                                  methods.</span
+                                ></span
+                              ><span
+                                _ngcontent-ylj-c17=""
+                                class="checkbox__definition"
+                                ><span _ngcontent-ylj-c17=""
+                                  ><strong _ngcontent-ylj-c17=""
+                                    >New payment method for future lease
+                                    agreements with us.
+                                  </strong></span
+                                ><span _ngcontent-ylj-c17=""
+                                  >If you later agree to another lease with us
+                                  and use a different payment method, you
+                                  consent to Progressive Leasing using that new
+                                  payment method for payments on this lease,
+                                  instead of the payment method used here.</span
+                                ></span
+                              ><span
+                                _ngcontent-ylj-c17=""
+                                class="checkbox__definition"
+                              >
+                                If you wish to change your payment method, call
+                                us at
+                                <a
+                                  _ngcontent-ylj-c17=""
+                                  href="tel:1-877-898-1970"
+                                >
+                                  (877) 898‑1970</a
+                                >.
+                              </span></span
+                            ></label
+                          ></lite-initial-payment-consent
+                        ><!---->
+                      </section>
+                    </div></ui-page-card
+                  ></lite-disclosure-consent
+                >
+              </section>
+              <section
+                _ngcontent-ylj-c20=""
+                class="body__contract"
+                style="display: none"
+              >
+                <span
+                  _ngcontent-ylj-c20=""
+                  hidden=""
+                  aria-hidden="true"
+                  data-test-state-template=""
+                  style="display: none"
+                  >CA</span
+                ><grit-lease-contract
+                  _ngcontent-ylj-c20=""
+                  class="hydrated"
+                ></grit-lease-contract>
+              </section>
+            </div>
+          </div>
+          <footer
+            _ngcontent-ylj-c20=""
+            class="page__footer page__footer--content"
+          >
+            <div _ngcontent-ylj-c20="" class="footer">
+              <div _ngcontent-ylj-c20="" class="footer__left">
+                <p _ngcontent-ylj-c20="">Scroll to acknowledge</p>
+                <!----><!----><!---->
+              </div>
+            </div>
+            <!----><!---->
+          </footer>
+          <footer
+            _ngcontent-ylj-c20=""
+            class="page__footer page__footer--buttons"
+          >
+            <div _ngcontent-ylj-c20="" class="buttons">
+              <button
+                _ngcontent-ylj-c20=""
+                type="button"
+                disabled=""
+                class="ca-button ca-button--primary"
+              >
+                <span _ngcontent-ylj-c20="" class="ca-button__text"
+                  >Submit</span
+                ></button
+              ><a
+                _ngcontent-ylj-c20=""
+                target="_blank"
+                rel="noopener noreferrer"
+                type="application/pdf"
+                class="ca-button ca-button--text"
+                href="https://esign-demo2.progressivelp.com/esign-api/Document/readonly?leaseId=18926308"
+                ><svg _ngcontent-ylj-c20="" icon="" class="ca-button__icon">
+                  <use
+                    _ngcontent-ylj-c20=""
+                    href="#checkout-sprite-download"
+                  ></use></svg
+                ><span
+                  _ngcontent-ylj-c20=""
+                  class="ca-button__text ca-button__text--upper"
+                  >Download</span
+                ></a
+              >
+            </div>
+          </footer>
+        </main></lite-contract-route
+      ><!----></lite-root
+    >
+    <script
+      src="public/proganywhere-contract_files/runtime.381865c9b7c86ff4cd86.js"
+      defer=""
+    ></script>
+    <script
+      src="public/proganywhere-contract_files/polyfills-es5.b9d33ccdb1dde6ab85fc.js"
+      nomodule=""
+      defer=""
+    ></script>
+    <script
+      src="public/proganywhere-contract_files/polyfills.605df0cdd66096033b88.js"
+      defer=""
+    ></script>
+    <script
+      src="public/proganywhere-contract_files/main.015518837208ed98ed61.js"
+      defer=""
+    ></script>
+    <script
+      async=""
+      type="text/javascript"
+      src="public/proganywhere-contract_files/_Incapsula_Resource"
+    ></script>
+  </body>
+</html>

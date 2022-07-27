@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "super_secure_local_password",
+    "database": "retailer_products",
+    "host": "172.20.0.1",
+    "dialect": "postgres",
+    "port": "5433"
+  },
+  "underscored": true
+}
